@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+</body>
+<script>
+  function randomInt(n, m) {
+    return Math.floor(Math.random() * (m - n + 1) + n);
+  }
+
+  function randomColor() {
+    var r = randomInt(0, 211);
+    var g = randomInt(0, 233);
+    var b = randomInt(0, 254);
+    var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+    return color;
+  }
+
+  var c1 = randomColor();
+  var c2 = randomColor();
+  var angle = randomInt(0, 357);
+  console.log(c1, c2);
+  document.body.style.backgroundImage = 'linear-gradient(' + angle + 'deg,' + c1 + ',' + c2 + ')';
+</script>
+</html>
